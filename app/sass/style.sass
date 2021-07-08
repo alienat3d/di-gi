@@ -1,4 +1,3 @@
-@import libs/normalize.css
 @import fonts
 @import variables
 @import global
@@ -52,10 +51,47 @@
   &__item
     color: $color-white
     text-align: center
+    min-height: 193px
+
   &__title
+    position: relative
+    margin: 0 auto
     padding: 36px 0 28px
+    max-width: 243px
     @include roboto-cond400
     font-size: 28px
     line-height: 28px
     text-transform: uppercase
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 0
+      margin: 0 auto
+      width: 60px
+      height: 8px
+      background-color: $color-text
+
+.slick-dots
+  display: flex
+  justify-content: center
+  position: absolute
+  right: 0
+  bottom: 20px
+  left: 0
+  .slick-active
+    button
+      background-color: transparent
+      border: 1px solid #476E4D
+
+  button
+    margin: 0 10px
+    padding: 0
+    font-size: 0
+    border: none
+    width: 10px
+    height: 10px
+    border-radius: 50%
+    background-color: $color-accent
 // === / HEAD ===
