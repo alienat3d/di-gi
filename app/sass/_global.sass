@@ -15,6 +15,10 @@ ul, li
 p
   margin: 0
 
+a
+  text-decoration: none
+  color: inherit
+
 button
   cursor: pointer
 
@@ -23,6 +27,7 @@ body
   @include roboto400
   font-size: 16px
   line-height: 18px
+  color: $color-default
   overflow-x: hidden
 
 .container
@@ -41,3 +46,29 @@ body
 @media (min-width: 1440px)
   .container
     max-width: 1320px
+
+.title
+  padding-bottom: 28px
+  position: relative
+  @include roboto-cond400
+  font-size: 24px
+  line-height: 28px
+
+  &::before
+    content: ''
+    margin: 0 auto
+    position: absolute
+    right: 0
+    bottom: 0
+    left: 0
+    width: 50px
+    height: 8px
+    background-color: $color-accent
+
+@media (min-width: 640px)
+  .title
+    font-size: 48px
+    line-height: 56px
+
+    &::before
+      width: 100px

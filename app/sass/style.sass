@@ -293,5 +293,99 @@
 
     &__box
       max-width: 796px
-
 // === / CALL-US ===
+// === SERVICE ===
+.service
+  padding: 25px 0 40px
+  text-align: center
+
+  &__title
+    margin-bottom: 47px
+    color: $color-accent
+
+  &__description
+    margin-bottom: 21px
+    font-size: 20px
+    line-height: 24px
+    color: $color-text
+
+  &__text
+    margin-bottom: 40px
+    font-size: 15px
+    line-height: 17px
+    // FIXME: change for one of basic colors later
+    color: #797979
+
+  &__item
+    padding: 0 18px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    min-height: 310px
+    border: 1px solid $color-brand-white
+    border-bottom: none
+    &:last-child
+      border-bottom: 1px solid $color-brand-white
+    &:hover
+      .service__item-link,
+      .service__item-text
+        display: block
+      
+      .service__item-title
+        margin-bottom: 30px
+
+      .service__item-inner
+        margin: 18px 0
+        padding: 25px 20px 5px
+        min-height: 277px
+        border: 4px solid $color-accent
+
+  &__item-image
+    margin-bottom: 30px
+
+  &__item-title
+    @include roboto-cond700
+    font-size: 16px
+    line-height: 19px
+    letter-spacing: 2px
+    color: $color-text
+
+  &__item-text
+    display: none
+    margin-bottom: 17px
+    @include dosis500
+    
+  &__item-link
+    display: none
+    @include roboto-cond700
+    font-size: 16px
+    line-height: 19px
+    letter-spacing: 2px
+    text-transform: uppercase
+    color: $color-accent
+
+@media (min-width: 640px)
+  .service
+    padding: 24px 0 0
+
+    &__description
+      margin-bottom: 31px
+      padding-bottom: 38px
+      font-size: 24px
+
+    &__text
+      font-size: 18px
+      line-height: 24px
+
+    &__items
+      display: flex
+      flex-wrap: wrap
+      margin: 0 -30px
+
+    &__item
+      width: 50%
+      &:last-child
+        border-bottom: none
+      &:nth-child(even)
+        border-left: none
+// === / SERVICE ===
