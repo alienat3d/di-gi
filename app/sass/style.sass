@@ -344,7 +344,7 @@
         border: 4px solid $color-accent
 
   &__item-inner
-    transition: all .3s
+    transition: $transition-fast
 
   &__item-image
     margin-bottom: 30px
@@ -373,7 +373,7 @@
     opacity: 0
     height: 0
     overflow: hidden
-    transition: all .3s
+    transition: $transition-fast
 
 @media (min-width: 640px)
   .service
@@ -490,7 +490,7 @@
 // === PROJECTS ===
   // FIXME:gradient isn't working
 .projects
-  padding: 20px 0 40px
+  padding: 20px 0
   text-align: center
   background: linear-gradient(180deg, $color-accent 0%, rgba(43, 64, 116, 0) 100%)
 
@@ -502,6 +502,9 @@
 
   &__item-image
     padding: 11px 14px
+    background-position: center
+    background-repeat: no-repeat
+    background-size: contain
     min-height: 250px
     border-radius: 4px
     &:hover .projects__item-inner
@@ -515,12 +518,15 @@
     background-color: rgba($color-brand-white, .8)
     border-radius: 4px
     opacity: 0
-    transition: all .5s
-  
+    transition: $transition-regular
+
   &__item-info,
   &__item-magnifying
     margin: 0 7px
-  
+    transition: $transition-fast
+    &:hover
+      transform: scale(1.2)
+
   &__item-link
     display: block
     padding: 20px 0
@@ -528,6 +534,70 @@
     line-height: 19px
     letter-spacing: 2px
     color: $color-accent
+
+@media (min-width: 640px)
+  .projects
+    padding: 40px 0 20px
+
+    &__item-image
+      padding: 21px 24px
+      width: 518px
+      min-height: 460px
+
+    &__item-inner
+      min-height: 418px
+
+    &__item-info,
+    &__item-magnifying
+      margin: 0 13px
+
+    &__item-link
+      font-size: 20px
+      line-height: 23px
+      color: $color-accent
+
+@media (min-width: 768px)
+  .projects
+    padding: 80px 0 60px
+
+    &__items
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+
+    &__item-image
+      padding: 11px 14px
+      width: 317px
+      min-height: 282px
+
+    &__item-inner
+      min-height: 256px
+
+    &__item-info,
+    &__item-magnifying
+      margin: 0 8px
+
+    &__item-link
+      padding: 30px 0
+
+@media (min-width: 1024px)
+  .projects
+    &__items
+      justify-content: center
+
+    &__item-image
+      margin: 0 12px
+
+@media (min-width: 1440px)
+  .projects
+    &__items
+      flex-wrap: nowrap
+      justify-content: space-between
+
+    &__item-image
+      width: 300px
+      margin: 0
+
 // === / PROJECTS ===
 
 // === TEAM ===
@@ -545,7 +615,6 @@
 
   &__text
     margin-bottom: 84px
-
     p
       margin-bottom: 10px
 
@@ -558,4 +627,77 @@
     border: none
     background-color: $color-accent
     border-radius: 3px
+
+@media (min-width: 640px)
+  .team
+    padding: 46px 0 54px
+
+    &__title
+      margin-bottom: 40px
+
+    &__text
+      margin-bottom: 56px
+
+@media (min-width: 768px)
+  .team
+    padding: 40px 0 48px
+    text-align: left
+
+    &__inner
+      display: flex
+
+    &__image
+      margin-bottom: 0
+      margin-right: 34px
+      width: 240px
+      height: 100%
+      border-radius: 4px
+
+    &__title
+      margin-bottom: 17px
+      padding-bottom: 28px
+      font-size: 36px
+      line-height: 38px
+      &::before
+        margin-left: 2px
+
+    &__text
+      margin-bottom: 20px
+      font-size: 18px
+
+@media (min-width: 1024px)
+  .team
+    padding: 80px 0
+
+    &__image
+      width: 395px
+      margin-right: 60px
+
+    &__title
+      margin-top: 10px
+      margin-bottom: 19px
+      padding-bottom: 28px
+      font-size: 48px
+      line-height: 56px
+
+    &__text
+      line-height: 24px
+      font-size: 18px
+
+@media (min-width: 1440px)
+  .team
+    padding: 50px 0 110px
+
+    &__image
+      width: 470px
+      margin-right: 90px
+
+    &__title
+      margin-bottom: 40px
+
+    &__text
+      margin-bottom: 43px
+      width: 553px
+      p
+        margin-bottom: 18px
 // === / TEAM ===
