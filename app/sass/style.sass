@@ -486,3 +486,76 @@
           padding: 10px 3px 5px
           min-height: 255px
 // === / SERVICE ===
+
+// === PROJECTS ===
+  // FIXME:gradient isn't working
+.projects
+  padding: 20px 0 40px
+  text-align: center
+  background: linear-gradient(180deg, $color-accent 0%, rgba(43, 64, 116, 0) 100%)
+
+  &__title
+    margin-bottom: 40px
+    color: $color-white
+    &::before
+      background-color: $color-white
+
+  &__item-image
+    padding: 11px 14px
+    min-height: 250px
+    border-radius: 4px
+    &:hover .projects__item-inner
+      opacity: 1
+
+  &__item-inner
+    display: flex
+    justify-content: center
+    align-items: center
+    min-height: 227px
+    background-color: rgba($color-brand-white, .8)
+    border-radius: 4px
+    opacity: 0
+    transition: all .5s
+  
+  &__item-info,
+  &__item-magnifying
+    margin: 0 7px
+  
+  &__item-link
+    display: block
+    padding: 20px 0
+    @include roboto-cond700
+    line-height: 19px
+    letter-spacing: 2px
+    color: $color-accent
+// === / PROJECTS ===
+
+// === TEAM ===
+.team
+  padding: 20px 0 40px
+  text-align: center
+
+  &__image
+    margin-bottom: 40px
+    width: 100%
+
+  &__title
+    margin-bottom: 23px
+    color: $color-text
+
+  &__text
+    margin-bottom: 84px
+
+    p
+      margin-bottom: 10px
+
+  &__button
+    padding: 21px 26px
+    @include roboto500
+    font-size: 20px
+    text-transform: uppercase
+    color: $color-brand-white
+    border: none
+    background-color: $color-accent
+    border-radius: 3px
+// === / TEAM ===
