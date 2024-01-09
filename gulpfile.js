@@ -59,7 +59,7 @@ function images() {
         }),
       ])
     )
-    .pipe(dest('dist/images'));
+    .pipe(dest('docs/images'));
 }
 
 function build() {
@@ -72,11 +72,11 @@ function build() {
   {
     base: 'app',
   })
-    .pipe(dest('dist'));
+    .pipe(dest('docs'));
 }
 
-function cleanDist() {
-  return del('dist');
+function cleanDocs() {
+  return del('docs');
 }
 
 function watching() {
@@ -90,8 +90,8 @@ exports.scripts = scripts;
 exports.browsersync = browsersync;
 exports.watching = watching;
 exports.images = images;
-exports.cleanDist = cleanDist;
+exports.cleanDocs = cleanDocs;
 
 exports.default = parallel(styles, scripts, browsersync, watching);
 
-exports.build = series(cleanDist, images, build);
+exports.build = series(cleanDocs, images, build);

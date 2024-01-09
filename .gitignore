@@ -7,7 +7,6 @@
 *.sublime*
 npm-debug.*
 
-dist/
 node_modules/
 app/css/*
 package-lock.json
