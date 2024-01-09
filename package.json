@@ -1,27 +1,35 @@
 {
-  "name": "new-start-gulp",
+  "name": "di-gi",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alienat3d/di-gi.git"
+  },
   "author": "Al Tsaplin",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alienat3d/di-gi/issues"
+  },
+  "homepage": "https://github.com/alienat3d/di-gi#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.14",
-    "del": "^6.0.0",
+    "browser-sync": "^3.0.2",
+    "del": "^6.1.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^7.1.0",
-    "gulp-sass": "^4.1.0",
+    "gulp-imagemin": "7.1",
+    "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
-    "jquery": "^3.6.0",
-    "normalize.css": "^8.0.1",
+    "jquery": "^3.7.1",
+    "sass": "^1.69.7",
     "slick-carousel": "^1.8.1"
   },
   "dependencies": {
-    "slick-slider": "^1.8.2"
+    "normalize.css": "^8.0.1"
   }
 }
